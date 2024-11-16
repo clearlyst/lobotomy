@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F3E42845-8D56-4BB3-821D-8163AB1337F0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CSGOSimple</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>csgo-cheat</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>C:\Users\пиксеь\Desktop\Sourcec\Freetype;C:\freetype-master\include;E:\curl-8.0.1\x86release\include;E:\DXSDK\Include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <TargetName>csgosimple</TargetName>
+    <LibraryPath>C:\Users\пиксеь\Desktop\Sourcec\Freetype;C:\freetype-master\objs\Win32\Debug Static;E:\curl-8.0.1\x86release\lib;E:\DXSDK\Lib\x86;$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)dll\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>WIN2X2L0D03RFIK</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CSGOSIMPLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>dfreetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CSGOSIMPLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\jfurj\Downloads\gl0ss_v2.zip_pass_123\gl0ss_v2\gl0ss_v2\CSGOSimple\imgui\freetype\include;D:\curl-8.0.1\x86release\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>freetype.lib;Ws2_32.lib;Crypt32.lib;Wldap32.lib;Normaliz.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="discord-rpc-sdk-main\connection_win.cpp" />
+    <ClCompile Include="discord-rpc-sdk-main\discord_register_win.cpp" />
+    <ClCompile Include="discord-rpc-sdk-main\discord_rpc.cpp" />
+    <ClCompile Include="discord-rpc-sdk-main\rpc_connection.cpp" />
+    <ClCompile Include="discord-rpc-sdk-main\serialization.cpp" />
+    <ClCompile Include="discord_rpc_init.cpp" />
+    <ClCompile Include="features\aimbot.cpp" />
+    <ClCompile Include="features\autowall.cpp" />
+    <ClCompile Include="features\bhop.cpp" />
+    <ClCompile Include="features\bt.cpp" />
+    <ClCompile Include="features\chams.cpp" />
+    <ClCompile Include="features\cmouse.cpp" />
+    <ClCompile Include="features\glow.cpp" />
+    <ClCompile Include="features\item_definitions.cpp" />
+    <ClCompile Include="features\kit_parser.cpp" />
+    <ClCompile Include="features\lagcomp.cpp" />
+    <ClCompile Include="features\NewOne.cpp" />
+    <ClCompile Include="features\Notify.cpp" />
+    <ClCompile Include="features\parser.cpp" />
+    <ClCompile Include="features\PlayerVisual.cpp" />
+    <ClCompile Include="features\player_s.cpp" />
+    <ClCompile Include="features\render2.cpp" />
+    <ClCompile Include="features\scaleform.c" />
+    <ClCompile Include="features\SCEELFORMULAAA.c" />
+    <ClCompile Include="features\skins.cpp" />
+    <ClCompile Include="features\visuals.cpp" />
+    <ClCompile Include="global_vars.cpp" />
+    <ClCompile Include="helpers\input.cpp" />
+    <ClCompile Include="helpers\math.cpp" />
+    <ClCompile Include="helpers\prediction.cpp" />
+    <ClCompile Include="helpers\utils.cpp" />
+    <ClCompile Include="helpers\vfunc_hook.cpp" />
+    <ClCompile Include="hooks.cpp" />
+    <ClCompile Include="imgui\freetype\imgui_freetype.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="imgui\impl\imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui\impl\imgui_impl_win32.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="minhookde.cpp" />
+    <ClCompile Include="minimal_hook.cpp" />
+    <ClCompile Include="MininmalHook\buffer.c" />
+    <ClCompile Include="MininmalHook\hde\hde32.c" />
+    <ClCompile Include="MininmalHook\hde\hde64.c" />
+    <ClCompile Include="MininmalHook\hook.c" />
+    <ClCompile Include="MininmalHook\trampoline.c" />
+    <ClCompile Include="options.cpp" />
+    <ClCompile Include="render.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="ui.cpp" />
+    <ClCompile Include="valve_sdk\csgostructs.cpp" />
+    <ClCompile Include="valve_sdk\sdk.cpp" />
+    <ClCompile Include="valve_sdk\math\Vector2D.cpp" />
+    <ClCompile Include="valve_sdk\math\Vector4D.cpp" />
+    <ClCompile Include="valve_sdk\math\VMatrix.cpp" />
+    <ClCompile Include="valve_sdk\misc\characterset.cpp" />
+    <ClCompile Include="valve_sdk\misc\checksum_crc.cpp" />
+    <ClCompile Include="valve_sdk\misc\checksum_md5.cpp" />
+    <ClCompile Include="valve_sdk\misc\Color.cpp" />
+    <ClCompile Include="valve_sdk\misc\Convar.cpp" />
+    <ClCompile Include="valve_sdk\misc\UtlBuffer.cpp" />
+    <ClCompile Include="valve_sdk\misc\UtlString.cpp" />
+    <ClCompile Include="valve_sdk\netvars.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abobik.h" />
+    <ClInclude Include="discord-rpc-sdk-main\backoff.h" />
+    <ClInclude Include="discord-rpc-sdk-main\connection.h" />
+    <ClInclude Include="discord-rpc-sdk-main\discord_register.h" />
+    <ClInclude Include="discord-rpc-sdk-main\discord_rpc.h" />
+    <ClInclude Include="discord-rpc-sdk-main\msg_queue.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\allocators.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\document.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\encodedstream.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\encodings.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\error\en.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\error\error.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\filereadstream.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\filewritestream.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\fwd.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\clzll.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\itoa.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\meta.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\pow10.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\regex.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\stack.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\strtod.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\internal\swap.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\memorybuffer.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\memorystream.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\pointer.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\prettywriter.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\rapidjson.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\reader.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\schema.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\stream.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\stringbuffer.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rapidjson\writer.h" />
+    <ClInclude Include="discord-rpc-sdk-main\rpc_connection.h" />
+    <ClInclude Include="discord-rpc-sdk-main\serialization.h" />
+    <ClInclude Include="discord_rpc_init.h" />
+    <ClInclude Include="features\aimbot.hpp" />
+    <ClInclude Include="features\autowall.hpp" />
+    <ClInclude Include="features\bt.h" />
+    <ClInclude Include="features\chat_hud.h" />
+    <ClInclude Include="features\cmouse.h" />
+    <ClInclude Include="features\crypt_str.hpp" />
+    <ClInclude Include="features\fonts.h" />
+    <ClInclude Include="features\icons.h" />
+    <ClInclude Include="features\item_definitions.h" />
+    <ClInclude Include="features\i_surface.h" />
+    <ClInclude Include="features\kit_parser.h" />
+    <ClInclude Include="features\lagcomp.h" />
+    <ClInclude Include="features\minhookde.h" />
+    <ClInclude Include="features\minimal_hook.h" />
+    <ClInclude Include="features\NewOne.h" />
+    <ClInclude Include="features\Notify.h" />
+    <ClInclude Include="features\parser.h" />
+    <ClInclude Include="features\PlayerVisual.h" />
+    <ClInclude Include="features\player_s.h" />
+    <ClInclude Include="features\render2.h" />
+    <ClInclude Include="features\skins.h" />
+    <ClInclude Include="features\virtualmethod.h" />
+    <ClInclude Include="helpers\eightk.h" />
+    <ClInclude Include="helpers\Firstk.h" />
+    <ClInclude Include="helpers\fithhk.h" />
+    <ClInclude Include="helpers\fnv.h" />
+    <ClInclude Include="helpers\forthk.h" />
+    <ClInclude Include="helpers\prediction.hpp" />
+    <ClInclude Include="helpers\Seck.h" />
+    <ClInclude Include="helpers\sevenk.h" />
+    <ClInclude Include="helpers\sixk.h" />
+    <ClInclude Include="helpers\Thrk.h" />
+    <ClInclude Include="imgui\freetype\imgui_freetype.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\config\ftheader.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\freetype.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftadvanc.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftbbox.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftbdf.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftbitmap.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftbzip2.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftcache.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftchapters.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftcid.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftdriver.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\fterrdef.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\fterrors.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftgasp.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftglyph.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftgxval.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftgzip.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftimage.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftincrem.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftlist.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftlzw.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftmac.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftmm.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftmodapi.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftmoderr.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftotval.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftoutln.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftparams.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftpfr.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftrender.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftsizes.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftsnames.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftstroke.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftsynth.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftsystem.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\fttrigon.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\fttypes.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\autohint.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\cffotypes.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\cfftypes.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftdrv.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\fthash.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftpic.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftserv.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftstream.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\fttrace.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\internal.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\psaux.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\pshints.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\sfnt.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\t1types.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\internal\tttypes.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\t1tables.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\ttnameid.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\tttables.h" />
+    <ClInclude Include="imgui\freetype\include\freetype\tttags.h" />
+    <ClInclude Include="imgui\freetype\include\ft2build.h" />
+    <ClInclude Include="imgui\imgui_freetype.h" />
+    <ClInclude Include="imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\impl\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\impl\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="minhookde.h" />
+    <ClInclude Include="minimal_hook.h" />
+    <ClInclude Include="MininmalHook\buffer.h" />
+    <ClInclude Include="MininmalHook\hde\hde32.h" />
+    <ClInclude Include="MininmalHook\hde\hde64.h" />
+    <ClInclude Include="MininmalHook\hde\pstdint.h" />
+    <ClInclude Include="MininmalHook\hde\table32.h" />
+    <ClInclude Include="MininmalHook\hde\table64.h" />
+    <ClInclude Include="MininmalHook\minhook.h" />
+    <ClInclude Include="MininmalHook\trampoline.h" />
+    <ClInclude Include="network_string_table.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="valve_sdk\interfaces\IGameTypes.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IStudioRender.hpp" />
+    <ClInclude Include="valve_sdk\Misc\datamap.hpp" />
+    <ClInclude Include="features\bhop.hpp" />
+    <ClInclude Include="features\chams.hpp" />
+    <ClInclude Include="features\glow.hpp" />
+    <ClInclude Include="features\visuals.hpp" />
+    <ClInclude Include="helpers\input.hpp" />
+    <ClInclude Include="helpers\math.hpp" />
+    <ClInclude Include="helpers\utils.hpp" />
+    <ClInclude Include="helpers\vfunc_hook.hpp" />
+    <ClInclude Include="hooks.hpp" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\stb_rect_pack.h" />
+    <ClInclude Include="imgui\stb_textedit.h" />
+    <ClInclude Include="imgui\stb_truetype.h" />
+    <ClInclude Include="valve_sdk\interfaces\IRefCounted.hpp" />
+    <ClInclude Include="menu.hpp" />
+    <ClInclude Include="options.hpp" />
+    <ClInclude Include="render.hpp" />
+    <ClInclude Include="singleton.hpp" />
+    <ClInclude Include="ui.hpp" />
+    <ClInclude Include="valve_sdk\csgostructs.hpp" />
+    <ClInclude Include="valve_sdk\sdk.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\CClientState.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\CInput.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IAppSystem.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IBaseClientDll.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IClientEntity.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IClientEntityList.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IClientMode.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IClientNetworkable.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IClientRenderable.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IClientThinkable.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IClientUnknown.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\ICollideable.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IConVar.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\ICvar.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IEngineSound.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IEngineTrace.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IGameEventmanager.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IMaterialSystem.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IMDLCache.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IMoveHelper.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IPanel.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IPhysics.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IPrediction.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IRenderView.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\ISurface.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IVDebugOverlay.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IVEngineClient.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IViewRender.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IVModelInfoClient.hpp" />
+    <ClInclude Include="valve_sdk\interfaces\IVModelRender.hpp" />
+    <ClInclude Include="valve_sdk\math\QAngle.hpp" />
+    <ClInclude Include="valve_sdk\math\Vector.hpp" />
+    <ClInclude Include="valve_sdk\math\Vector2D.hpp" />
+    <ClInclude Include="valve_sdk\math\Vector4D.hpp" />
+    <ClInclude Include="valve_sdk\math\VMatrix.hpp" />
+    <ClInclude Include="valve_sdk\misc\BaseHandle.hpp" />
+    <ClInclude Include="valve_sdk\misc\characterset.hpp" />
+    <ClInclude Include="valve_sdk\misc\checksum_crc.hpp" />
+    <ClInclude Include="valve_sdk\misc\checksum_md5.hpp" />
+    <ClInclude Include="valve_sdk\misc\ClientClass.hpp" />
+    <ClInclude Include="valve_sdk\misc\Color.hpp" />
+    <ClInclude Include="valve_sdk\misc\Convar.hpp" />
+    <ClInclude Include="valve_sdk\misc\CUserCmd.hpp" />
+    <ClInclude Include="valve_sdk\misc\EHandle.hpp" />
+    <ClInclude Include="valve_sdk\misc\Enums.hpp" />
+    <ClInclude Include="valve_sdk\misc\GlobalVars.hpp" />
+    <ClInclude Include="valve_sdk\misc\glow_outline_effect.hpp" />
+    <ClInclude Include="valve_sdk\misc\IHandleEntity.hpp" />
+    <ClInclude Include="valve_sdk\misc\platform.hpp" />
+    <ClInclude Include="valve_sdk\misc\Recv.hpp" />
+    <ClInclude Include="valve_sdk\misc\Studio.hpp" />
+    <ClInclude Include="valve_sdk\misc\UtlBuffer.hpp" />
+    <ClInclude Include="valve_sdk\misc\UtlMemory.hpp" />
+    <ClInclude Include="valve_sdk\misc\UtlString.hpp" />
+    <ClInclude Include="valve_sdk\misc\UtlVector.hpp" />
+    <ClInclude Include="valve_sdk\misc\vfunc.hpp" />
+    <ClInclude Include="valve_sdk\netvars.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\freetype.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
